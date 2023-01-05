@@ -1,10 +1,20 @@
 import React from "react";
 import "./App.scss";
+import logo from "./logo.svg";
+import MyComponent from "./Example/MyComponent";
+// const App = () => {
+
+// }
 function App() {
   return (
-    <div>
-      <h1>Hello React.js - Freetuts.net</h1>
-    </div>
+    <>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <MyComponent />
+        </header>
+      </div>
+    </>
   );
 }
 
