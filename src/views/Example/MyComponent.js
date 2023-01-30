@@ -1,5 +1,6 @@
 import React from "react";
 import ChildComponent from "./ChildComponent";
+import AddComponent from "./AddComponent";
 class MyComponent extends React.Component {
   state = {
     firstName: "",
@@ -54,6 +55,7 @@ class MyComponent extends React.Component {
           => this.handleOnButton()}>Submit</button>
         </div> */}
         <form>
+          <AddComponent />
           <label htmlFor="fname">first name:</label>
           <br />
           <input
@@ -62,8 +64,10 @@ class MyComponent extends React.Component {
             onChange={(event) => this.handleOnchangeFirstName(event)}
           />
           <br />
+          <div>hello {this.state.firstName}</div>
           <label htmlFor="lname">Last name:</label>
           <br />
+
           <input
             type="text"
             value={this.state.lastName}
